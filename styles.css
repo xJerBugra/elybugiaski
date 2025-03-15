@@ -8,6 +8,7 @@ body {
     height: auto;
     min-height: 100vh;
     padding-bottom: 50px;
+    transition: background-color 3s ease-in-out; /* Arka plan renginin geçişi */
 }
 
 .heart {
@@ -19,7 +20,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
     animation: beat 1.5s infinite;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out, box-shadow 0.5s ease-in-out; /* Kalp animasyonuna ışıldama ekliyoruz */
+    z-index: 10; /* Kalp en üstte olacak */
 }
 
 .heart::before,
