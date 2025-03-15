@@ -45,6 +45,6 @@ function addImages() {
             img.style.margin = "5px";
 
             body.appendChild(img);
-        }, index * 50); // Hızlı ekleme
+        }, index * 100); // Hızlı ekleme
     });
 }
