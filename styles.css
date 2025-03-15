@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    animation: beat 1.5s infinite;
+    transition: opacity 1s ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 50px;
+}
+
+@keyframes beat {
+    0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(-45deg); }
+    50% { transform: translate(-50%, -50%) scale(1.2) rotate(-45deg); }
+}
+
+img {
+    object-fit: cover;
+    border-radius: 8px;
+}
