@@ -9,7 +9,7 @@ for (let i = 1; i <= 796; i++) {
     images.push(`img${i}.jpg`);
 }
 
-let imageSize = 120; // Sabit resim boyutu
+let imageSize = 80; // Sabit resim boyutu
 let imagesLoaded = false;
 
 body.addEventListener("click", () => {
